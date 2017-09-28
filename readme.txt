@@ -1,7 +1,11 @@
-//È«¾Ö°²×°
+// å…¨å±€å®‰è£…
 npm install -g webpack
-//°²×°µ½ÄãµÄÏîÄ¿Ä¿Â¼
+// å®‰è£…åˆ°å·¥ä½œç›®å½•
 npm install --save-dev webpack
 
 
-npm init
+npm initi
+
+
+hello  this lk_mac
+
