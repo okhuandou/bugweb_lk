@@ -1,0 +1,17 @@
+{
+  "name": "node_demo1",
+  "version": "1.0.0",
+  "description": "node webpack vue sass ..",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack",
+    "test": "test",
+    "server": "webpack-dev-server --open"
+  },
+  "author": "lk",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
