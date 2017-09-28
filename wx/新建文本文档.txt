@@ -1,0 +1,53 @@
+http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index 
+教程地址： http://www.jianshu.com/p/42e11515c10f
+
+--使用webpack构建本地服务器
+
+想不想让你的浏览器监听你的代码的修改，并自动刷新显示修改后的结果，其实Webpack提供一个可选的本地开发服务器，这个本地服务器基于node.js构建，可以实现你想要的这些功能，不过它是一个单独的组件，在webpack中进行配置之前需要单独安装它作为项目依赖
+
+npm install --save-dev webpack-dev-server
+
+
+把这些命令加到webpack的配置文件中，现在的配置文件webpack.config.js如下所示
+
+module.exports = {
+  devtool: 'eval-source-map',
+
+  entry:  __dirname + "/app/main.js",
+  output: {
+    path: __dirname + "/public",
+    filename: "bundle.js"
+  },
+
+  devServer: {
+    contentBase: "./public",//本地服务器所加载的页面所在的目录
+    historyApiFallback: true,//不跳转
+    inline: true//实时刷新
+  } 
+}
+
+在package.json中的scripts对象中添加如下命令，用以开启本地服务器：
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "server": "webpack-dev-server --open"
+  },
+
+在终端中输入npm run server即可在本地的8080端口查看结果
+
+作者：zhangwang
+链接：http://www.jianshu.com/p/42e11515c10f
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+
+appID
+wx19638d9e34825f73
+appsecret
+7938e212a4f09bcd2bd4c5eecd075856
+token 
+duchao
+URL
+http://lkkuay.tunnel.qydev.com/wechat-core/
